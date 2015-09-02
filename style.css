@@ -246,19 +246,6 @@ body{
 	padding-right: 0;
 	margin-right: 0;
 }
-
-#htmlcsshistory, #angularjsphilosophy, #jshistory{
-	display: none;
-}
-/*#htmlcsshistory:target{
-	display: block;
-}
-#angularjsphilosophy:target{
-	display: block;
-}
-#jshistory:target{
-	display: block;
-}*/
 #nextbtn{
 	float:right;
 }
