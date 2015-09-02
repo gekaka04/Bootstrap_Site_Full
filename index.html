@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap Full Site</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container-fluid" id="main">
+		<div class="row" id="menu">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  			<div class="container-fluid">
+	  				<div class="col-xs-6 col-lg-3 col-sm-6 col-md-4" id="Logo">
+						<img src="images/logo.png" height="75" width="289" alt="Full Site Logo">
+					</div>
+					<div class="col-lg-2 hidden-md hidden-xs hidden-sm" id="SN">
+						<a href="http://facebook.com" target="_blank" class="fa fa-facebook fa-3x" id="FB"></a>
+						<a href="http://twitter.com" target="_blank" class="fa fa-twitter fa-3x" id="Twit"></a>
+						<a href="http://vk.com" target="_blank" class="fa fa-vk fa-3x" id="VK"></a>
+					</div>
+
+	    			<!-- Brand and toggle get grouped for better mobile display -->
+	    			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4" id="navigation">
+		    			<div class="navbar-header">
+		      				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+		        				<span class="sr-only">Toggle navigation</span>
+		        				<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+		      				</button>
+		   				</div>
+
+		    			<!-- Collect the nav links, forms, and other content for toggling -->
+		    			<div class="collapse navbar-collapse navbar-ex1-collapse" id="navbar-collapse-1">
+		      				<ul class="nav navbar-nav">
+		        				<li><a href="#" class="mylinks">About Site <span class="sr-only">(current)</span></a></li>
+		        				<li class="dropdown">
+		          				<a href="#" class="dropdown-toggle mylinks" data-toggle="dropdown">Literature <b class="caret"></b></a>
+		          					<ul class="dropdown-menu">
+		            					<li><a href="#">Books</a></li>
+		            					<li><a href="#">Themes</a></li>
+		           						<li><a href="#">Authors</a></li>
+		          					</ul>
+		        				</li>
+		        				<li class="dropdown">
+		          				<a href="#" class="dropdown-toggle mylinks" data-toggle="dropdown">Articles <b class="caret"></b></a>
+		          					<ul class="dropdown-menu">
+		            					<li class="dropdown dropdown-submenu">
+		            						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Works</a>
+											<ul class="dropdown-menu">
+													<li><a href="#cslist">C#</a></li>
+													<li><a href="#jslist">JS</a></li>
+													<li><a href="#angularjslist">AngularJS</a></li>
+													<li><a href="#htmlcsslist">HTML + CSS</a></li>
+											</ul>
+		            					</li>
+		            					<li><a href="#">Skrins</a></li>
+		          					</ul>
+		        				</li>
+		      				</ul>	     				
+		    			</div><!-- /.navbar-collapse -->
+	    			</div>
+	    			<div class="col-lg-3 hidden-md hidden-xs hidden-sm" id="searchMenu">
+						<form class="navbar-form pull-right " role="search">
+							<div class="input-group" ng-controller="Demo">
+          						<input type="text" class="form-control" placeholder="Search" ng-model="search.text">
+          						<span class="input-group-btn">
+          							<button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+          						</span>
+          					</div>
+      					</form>
+					</div>
+	  			</div><!-- /.container-fluid -->
+			</nav>
+		</div>
+
+		<div class="row">
+			<div id="carousel" class="carousel slide">
+				<!--Slide indicators-->
+				<ol class="carousel-indicators">
+					<li class="active" data-target="#carousel" data-slide-to="0"></li>
+					<li data-target="#carousel" data-slide-to="1" class=""></li>
+					<li data-target="#carousel" data-slide-to="2" class=""></li>
+				</ol>
+				<!--Slides-->
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="images/nature1.jpg" height="600" width="1920" alt="Image1">
+						<div class="carousel-caption">
+							<h3>First Slide</h3>
+							<p>First Slide Description</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/nature2.jpg" height="600" width="1920" alt="Image2">
+						<div class="carousel-caption">
+							<h3>Second Slide</h3>
+							<p>Second Slide Description</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/nature3.jpg" height="600" width="1920" alt="Image3">
+						<div class="carousel-caption">
+							<h3>Third Slide</h3>
+							<p>Third Slide Description</p>
+						</div>
+					</div>
+				</div>
+				<!--Arrow slide switching-->
+				<a href="#carousel" class="left carousel-control" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a href="#carousel" class="right carousel-control" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+		</div>
+		<div class="row" id="leftbox">
+			<div class="col-md-2" id="linkbox">
+				<aside class="col-md-7" id="linklist">
+				    <ul class="list-group submenu">
+				        <li class="list-group-item" id="headerli">WORKS</li>
+				        <li class="list-group-item"><a class="leftlinks btn btn-default" href="#cslist">C#</a></li>
+				        <li class="list-group-item"><a class="leftlinks btn btn-default" href="#jslist">JS</a></li>
+				        <li class="list-group-item"><a class="leftlinks btn btn-default" href="#angularjslist">AngularJS</a></li>
+				        <li class="list-group-item"><a class="leftlinks btn btn-default" href="#htmlcsslist">HTML + CSS</a></li>
+				    </ul>
+				</aside>
+			</div>
+			<div class="col-md-6" id="alltext">				
+				<div class="jumbotron">    				
+        				<p id="sentence">
+            				"С — это причудливый, несовершенный, но невероятно успешный язык."
+        				</p>
+        				<small>Dennis M. Ritchie</small>    				
+				</div>			  	
+				<div class="mycontent">
+					<ul class="mylist" id="cslist">
+						<h3>C#</h3>
+						<li><a href="#">cs exapmle 1</a></li>
+						<li><a href="#">cs exapmle 2</a></li>
+						<li><a href="#">cs exapmle 3</a></li>
+						<li><a href="#">cs exapmle 4</a></li>
+						<li><a href="#">cs exapmle 5</a></li>
+					</ul>
+					<ul class="mylist" id="jslist">
+						<h3>JS</h3>
+						<li><a href="#">js exapmle 1</a></li>
+						<li><a href="#">js exapmle 2</a></li>
+						<li><a href="#">js exapmle 3</a></li>
+						<li><a href="#">js exapmle 4</a></li>
+						<li><a href="#">js exapmle 5</a></li>
+					</ul>
+					<ul class="mylist" id="angularjslist">
+						<h3>AngularJS</h3>
+						<li><a href="#">angular exapmle 1</a></li>
+						<li><a href="#">angular exapmle 2</a></li>
+						<li><a href="#">angular exapmle 3</a></li>
+						<li><a href="#">angular exapmle 4</a></li>
+						<li><a href="#">angular exapmle 5</a></li>
+					</ul>
+					<ul class="mylist" id="htmlcsslist">
+						<h3>HTML + CSS</h3>
+						<li><a href="#">html + css exapmle 1</a></li>
+						<li><a href="#">html + css exapmle 2</a></li>
+						<li><a href="#">html + css exapmle 3</a></li>
+						<li><a href="#">html + css exapmle 4</a></li>
+						<li><a href="#">html + css exapmle 5</a></li>
+					</ul>
+				</div>
+				<div id="cshistory">
+					<h3>C# HISTORY</h3>
+					<p>
+						During the development of the .NET Framework, the class libraries were originally written using a managed code compiler system called Simple Managed C (SMC).[9][10] In January 1999, Anders Hejlsberg formed a team to build a new language at the time called Cool, which stood for "C-like Object Oriented Language".[11] Microsoft had considered keeping the name "Cool" as the final name of the language, but chose not to do so for trademark reasons. By the time the .NET project was publicly announced at the July 2000 Professional Developers Conference, the language had been renamed C#, and the class libraries and ASP.NET runtime had been ported to C#.
+
+						C#'s principal designer and lead architect at Microsoft is Anders Hejlsberg, who was previously involved with the design of Turbo Pascal, Embarcadero Delphi (formerly CodeGear Delphi, Inprise Delphi and Borland Delphi), and Visual J++. In interviews and technical papers he has stated that flaws[citation needed] in most major programming languages (e.g. C++, Java, Delphi, and Smalltalk) drove the fundamentals of the Common Language Runtime (CLR), which, in turn, drove the design of the C# language itself.
+
+						James Gosling, who created the Java programming language in 1994, and Bill Joy, a co-founder of Sun Microsystems, the originator of Java, called C# an "imitation" of Java; Gosling further said that "[C# is] sort of Java with reliability, productivity and security deleted."[12][13] Klaus Kreft and Angelika Langer (authors of a C++ streams book) stated in a blog post that "Java and C# are almost identical programming languages. Boring repetition that lacks innovation,"[14] "Hardly anybody will claim that Java or C# are revolutionary programming languages that changed the way we write programs," and "C# borrowed a lot from Java - and vice versa. Now that C# supports boxing and unboxing, we'll have a very similar feature in Java."[15] In July 2000, Anders Hejlsberg said that C# is "not a Java clone" and is "much closer to C++" in its design.[16]
+
+						Since the release of C# 2.0 in November 2005, the C# and Java languages have evolved on increasingly divergent trajectories, becoming somewhat less similar. One of the first major departures came with the addition of generics to both languages, with vastly different implementations. C# makes use of reification to provide "first-class" generic objects that can be used like any other class, with code generation performed at class-load time.[17] Furthermore, C# has added several major features to accommodate functional-style programming, culminating in the LINQ extensions released with C# 3.0 and its supporting framework of lambda expressions, extension methods, and anonymous types.[18] These features enable C# programmers to use functional programming techniques, such as closures, when it is advantageous to their application. The LINQ extensions and the functional imports help developers reduce the amount of "boilerplate" code that is included in common tasks like querying a database, parsing an xml file, or searching through a data structure, shifting the emphasis onto the actual program logic to help improve readability and maintainability.[19]
+
+						C# used to have a mascot called Andy (named after Anders Hejlsberg). It was retired on January 29, 2004.[20]
+
+						C# was originally submitted for review to the ISO subcommittee JTC 1/SC 22[21] under ISO/IEC 23270:2003,[22] which is now withdrawn. It was then approved under ISO/IEC 23270:2006.[23]
+					</p>
+				</div>
+				<div id="jshistory">
+					<h3>JS HISTORY</h3>
+					<p>
+						Beginnings at Netscape[edit]
+						JavaScript was originally developed by Brendan Eich, while he was working for Netscape Communications Corporation. Indeed, while competing with Microsoft for user adoption of web technologies and platforms, Netscape considered their client-server offering a distributed OS with a portable version of Sun Microsystems' Java providing an environment in which applets could be run.[citation needed] Because Java was a competitor of C++ and aimed at professional programmers, Netscape also wanted a lightweight interpreted language that would complement Java by appealing to nonprofessional programmers, like Microsoft's Visual Basic (see JavaScript and Java).[10]
+
+						Although it was developed under the name Mocha, the language was officially called LiveScript when it first shipped in beta releases of Netscape Navigator 2.0 in September 1995, but it was renamed JavaScript[11] when it was deployed in the Netscape browser version 2.0B3.[12]
+
+						The change of name from LiveScript to JavaScript roughly coincided with Netscape adding support for Java technology in its Netscape Navigator web browser. The final choice of name caused confusion, giving the impression that the language was a spin-off of the Java programming language, and the choice has been characterized as a marketing ploy by Netscape to give JavaScript the cachet of what was then the hot new web programming language.[13][14]
+
+						There is a common misconception that the JavaScript language was influenced by an earlier web page scripting language developed by Nombas named C--, not to be confused with the later C-- created in 1997.[15][16][17] Brendan Eich, however, had never heard of C-- before he created LiveScript.[18] Nombas did pitch their embedded web page scripting to Netscape, though web page scripting was not a new concept, as shown by ViolaWWW.[19] Nombas later switched to offering JavaScript instead of C-- in their ScriptEase product and was part of the TC39 group that standardized ECMAScript.[20][21]
+
+						Server-side JavaScript[edit]
+						Netscape introduced an implementation of the language for server-side scripting with Netscape Enterprise Server in December, 1995, soon after releasing JavaScript for browsers.[22][23] Since the mid-2000s, there has been a resurgence of server-side JavaScript implementations, such as Node.js.[24][25]
+
+						Adoption by Microsoft[edit]
+						Microsoft Windows script technologies including VBScript and JScript were released in 1996. JScript, a port of Netscape's JavaScript, was released on July 16, 1996 and was part of Internet Explorer 3, as well as being available server-side in Internet Information Server. IE3 also included Microsoft's first support for Cascading Style Sheets and various extensions to HTML, but in each case the implementation was noticeably different to that found in Netscape Navigator at the time.[26][27] These differences made it difficult for designers and programmers to make a single website work well in both browsers leading to the use of 'best viewed in Netscape' and 'best viewed in Internet Explorer' logos that characterised these early years of the browser wars.[28] JavaScript began to acquire a reputation for being one of the roadblocks to a cross-platform and standards-driven web. Some developers took on the difficult task of trying to make their sites work in both major browsers, but many could not afford the time.[26] With the release of Internet Explorer 4, Microsoft introduced the concept of Dynamic HTML, but the differences in language implementations and the different and proprietary Document Object Models remained, and were obstacles to widespread take-up of JavaScript on the web.[26]
+
+						Standardization[edit]
+						In November 1996, Netscape announced that it had submitted JavaScript to Ecma International for consideration as an industry standard, and subsequent work resulted in the standardized version named ECMAScript. In June 1997, Ecma International published the first edition of the ECMA-262 specification. In June 1998, some modifications were made to adapt it to the ISO/IEC-16262 standard, and the second edition was released. The third edition of ECMA-262 was published on December 1999.[29]
+
+						Development of the fourth edition of the ECMAScript standard was never completed.[30] The fifth edition was released in December 2009. The current edition of the ECMAScript standard is 6, released in June 2015.[31]
+
+						Later developments[edit]
+						JavaScript has become one of the most popular programming languages on the Web. Initially, however, many professional programmers denigrated the language because its target audience consisted of Web authors and other such "amateurs", among other reasons.[32] The advent of Ajax returned JavaScript to the spotlight and brought more professional programming attention. The result was a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside Web browsers, as seen by the proliferation of server-side JavaScript platforms.
+
+						In January 2009, the CommonJS project was founded with the goal of specifying a common standard library mainly for JavaScript development outside the browser.[33]
+
+						With the rise of the single-page web app and JavaScript-heavy sites, it is increasingly being used as a compile target for source-to-source compilers from both dynamic languages and static languages. In particular, Emscripten and highly optimized JIT compilers, in tandem with asm.js that is friendly to AOT compilers like OdinMonkey, have enabled C and C++ programs to be compiled into JavaScript and execute at near-native speeds, causing JavaScript to be considered the "assembly language of the web",[34] according to its creator and others.
+					</p>
+				</div>
+				<div id="angularjsphilosophy">
+					<h3>ANGULARJS PHILOSOPHY</h3>
+					<p>
+						AngularJS is built on the belief that declarative programming should be used to create user interfaces and connect software components, while imperative programming is better suited to defining an application's business logic.[2] The framework adapts and extends traditional HTML to present dynamic content through two-way data-binding that allows for the automatic synchronization of models and views. As a result, AngularJS de-emphasizes explicit DOM manipulation with the goal of improving testability and performance.
+
+						AngularJS's design goals include:
+
+						to decouple DOM manipulation from application logic. The difficulty of this is dramatically affected by the way the code is structured.
+						to decouple the client side of an application from the server side. This allows development work to progress in parallel, and allows for reuse of both sides.
+						to provide structure for the journey of building an application: from designing the UI, through writing the business logic, to testing.
+						Angular implements the MVC pattern to separate presentation, data, and logic components. Using dependency injection, Angular brings traditionally server-side services, such as view-dependent controllers, to client-side web applications. Consequently, much of the burden on the server can be reduced.
+					</p>
+				</div>
+				<div class="htmlcsshistory panel-group" id="accordion">
+					<div id="htmlcsshistory">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<a href="#collapsehtml" data-parent="#accordion" data-toggle="collapse">HTML HISTORY</a>
+							</h3>
+						</div>
+						<div id="collapsehtml" class="panel-collapse collapse">
+							<div class="panel-body">
+								
+							
+								<p>
+									In 1980, physicist Tim Berners-Lee, who was a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers to use and share documents. In 1989, Berners-Lee wrote a memo proposing an Internet-based hypertext system.[3] Berners-Lee specified HTML and wrote the browser and server software in late 1990. That year, Berners-Lee and CERN data systems engineer Robert Cailliau collaborated on a joint request for funding, but the project was not formally adopted by CERN. In his personal notes[4] from 1990 he listed[5] "some of the many areas in which hypertext is used" and put an encyclopedia first.
+
+									The first publicly available description of HTML was a document called "HTML Tags", first mentioned on the Internet by Berners-Lee in late 1991.[6][7] It describes 18 elements comprising the initial, relatively simple design of HTML. Except for the hyperlink tag, these were strongly influenced by SGMLguid, an in-house Standard Generalized Markup Language (SGML)-based documentation format at CERN. Eleven of these elements still exist in HTML 4.[8]
+
+									HTML is a markup language that web browsers use to interpret and compose text, images and other material into visual or audible web pages. Default characteristics for every item of HTML markup are defined in the browser, and these characteristics can be altered or enhanced by the web page designer's additional use of CSS. Many of the text elements are found in the 1988 ISO technical report TR 9537 Techniques for using SGML, which in turn covers the features of early text formatting languages such as that used by the RUNOFF command developed in the early 1960s for the CTSS (Compatible Time-Sharing System) operating system: these formatting commands were derived from the commands used by typesetters to manually format documents. However, the SGML concept of generalized markup is based on elements (nested annotated ranges with attributes) rather than merely print effects, with also the separation of structure and markup; HTML has been progressively moved in this direction with CSS.
+
+									Berners-Lee considered HTML to be an application of SGML. It was formally defined as such by the Internet Engineering Task Force (IETF) with the mid-1993 publication of the first proposal for an HTML specification: "Hypertext Markup Language (HTML)" Internet-Draft by Berners-Lee and Dan Connolly, which included an SGML Document Type Definition to define the grammar.[9] The draft expired after six months, but was notable for its acknowledgment of the NCSA Mosaic browser's custom tag for embedding in-line images, reflecting the IETF's philosophy of basing standards on successful prototypes.[10] Similarly, Dave Raggett's competing Internet-Draft, "HTML+ (Hypertext Markup Format)", from late 1993, suggested standardizing already-implemented features like tables and fill-out forms.[11]
+
+									After the HTML and HTML+ drafts expired in early 1994, the IETF created an HTML Working Group, which in 1995 completed "HTML 2.0", the first HTML specification intended to be treated as a standard against which future implementations should be based.[12]
+
+									Further development under the auspices of the IETF was stalled by competing interests. Since 1996, the HTML specifications have been maintained, with input from commercial software vendors, by the World Wide Web Consortium (W3C).[13] However, in 2000, HTML also became an international standard (ISO/IEC 15445:2000). HTML 4.01 was published in late 1999, with further errata published through 2001. In 2004 development began on HTML5 in the Web Hypertext Application Technology Working Group (WHATWG), which became a joint deliverable with the W3C in 2008, and completed and standardized on 28 October 2014. [14]
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<a href="#collapsecss" data-parent="#accordion" data-toggle="collapse">CSS HISTORY</a>
+							</h3>
+						</div>
+						<div class="panel-collapse collapse" id="collapsecss">
+							<div class="panel-body">
+								<p>
+									CSS was first proposed by Håkon Wium Lie on October 10, 1994.[13] At the time, Lie was working with Tim Berners-Lee at CERN.[14] Several other style sheet languages for the web were proposed around the same time, and discussions on public mailing lists and inside W3C resulted in the first W3C CSS Recommendation (CSS1)[15] being released in 1996. In particular, Bert Bos' proposal was influential; he became co-author of CSS1 and is regarded as co-creator of CSS.[16]
+
+									Style sheets have existed in one form or another since the beginnings of Standard Generalized Markup Language (SGML) in the 1980s, and CSS was developed to provide style sheets for the web.[17] One requirement for a web style sheet language was for style sheets to come from different sources on the web. Therefore, existing style sheet languages like DSSSL and FOSI were not suitable. CSS, on the other hand, allowed a document's style to be influenced by multiple style sheets by way of "cascading".[17]
+
+									As HTML grew, it came to encompass a wider variety of stylistic capabilities to meet the demands of web developers. This evolution gave the designer more control over site appearance, at the cost of more complex HTML. Variations in web browser implementations, such as ViolaWWW and WorldWideWeb,[18] made consistent site appearance difficult, and users had less control over how web content was displayed. The browser/editor developed by Tim Berners-Lee had style sheets that were hard-coded into the program. The style sheets could therefore not be linked to documents on the web.[19] Robert Cailliau, also of CERN, wanted to separate the structure from the presentation so that different style sheets could describe different presentation for printing, screen-based presentations, and editors.[18]
+
+									Improving web presentation capabilities was a topic of interest to many in the web community and nine different style sheet languages were proposed on the www-style mailing list.[17] Of these nine proposals, two were especially influential on what became CSS: Cascading HTML Style Sheets[13] and Stream-based Style Sheet Proposal (SSP).[16][20] Two browsers served as testbeds for the initial proposals; Lie worked with Yves Lafon to implement CSS in Dave Raggett's Arena browser.[21][22][23] Bert Bos implemented his own SSP proposal in the Argo browser.[16] Thereafter, Lie and Bos worked together to develop the CSS standard (the 'H' was removed from the name because these style sheets could also be applied to other markup languages besides HTML).[14]
+
+									Lie's proposal was presented at the "Mosaic and the Web" conference (later called WWW2) in Chicago, Illinois in 1994, and again with Bert Bos in 1995.[14] Around this time the W3C was already being established, and took an interest in the development of CSS. It organized a workshop toward that end chaired by Steven Pemberton. This resulted in W3C adding work on CSS to the deliverables of the HTML editorial review board (ERB). Lie and Bos were the primary technical staff on this aspect of the project, with additional members, including Thomas Reardon of Microsoft, participating as well. In August 1996 Netscape Communication Corporation presented an alternative style sheet language called JavaScript Style Sheets (JSSS).[14] The spec was never finished and is deprecated.[24] By the end of 1996, CSS was ready to become official, and the CSS level 1 Recommendation was published in December.
+
+									Development of HTML, CSS, and the DOM had all been taking place in one group, the HTML Editorial Review Board (ERB). Early in 1997, the ERB was split into three working groups: HTML Working group, chaired by Dan Connolly of W3C; DOM Working group, chaired by Lauren Wood of SoftQuad; and CSS Working group, chaired by Chris Lilley of W3C.
+
+									The CSS Working Group began tackling issues that had not been addressed with CSS level 1, resulting in the creation of CSS level 2 on November 4, 1997. It was published as a W3C Recommendation on May 12, 1998. CSS level 3, which was started in 1998, is still under development as of 2014.
+
+									In 2005 the CSS Working Groups decided to enforce the requirements for standards more strictly. This meant that already published standards like CSS 2.1, CSS 3 Selectors and CSS 3 Text were pulled back from Candidate Recommendation to Working Draft level.
+
+									Difficulty with adoption[edit]
+									The CSS 1 specification was completed in 1996. Microsoft's Internet Explorer 3[14] was released in that year, featuring some limited support for CSS. But it was more than three years before any web browser achieved near-full implementation of the specification. Internet Explorer 5.0 for the Macintosh, shipped in March 2000, was the first browser to have full (better than 99 percent) CSS 1 support,[25] surpassing Opera, which had been the leader since its introduction of CSS support 15 months earlier. Other browsers followed soon afterwards, and many of them additionally implemented parts of CSS 2. As of August 2010, no (finished) browser had fully implemented CSS 2, with implementation levels varying (see Comparison of layout engines (CSS)).
+
+									Even though early browsers such as Internet Explorer 3[14] and 4, and Netscape 4.x had support for CSS, it was typically incomplete and had many bugs that prevented their implementations from being usefully adopted.
+
+									When later 'version 5' browsers began to offer a fairly full implementation of CSS, they were still incorrect in certain areas and were fraught with inconsistencies, bugs and other quirks. The proliferation of such CSS-related inconsistencies and even the variation in feature support has made it difficult for designers to achieve a consistent appearance across browsers and platforms. Some authors resorted to workarounds such as CSS hacks and filters.
+
+									Problems with browsers' patchy adoption of CSS, along with errata in the original specification, led the W3C to revise the CSS 2 standard into CSS 2.1, which moved nearer to a working snapshot of current CSS support in HTML browsers. Some CSS 2 properties that no browser successfully implemented were dropped, and in a few cases, defined behaviors were changed to bring the standard into line with the predominant existing implementations. CSS 2.1 became a Candidate Recommendation on February 25, 2004, but CSS 2.1 was pulled back to Working Draft status on June 13, 2005,[26] and only returned to Candidate Recommendation status on July 19, 2007.[27]
+
+									In the past, some web servers were configured to serve all documents with the filename extension .css[28] as mime type application/x-pointplus[29] rather than text/css. At the time, there was a software product on the market to convert PowerPoint files into Compact Slide Show files using the .css extension.[30]
+
+									Variations[edit]
+									CSS has various levels and profiles. Each level of CSS builds upon the last, typically adding new features and typically denoted as CSS 1, CSS 2, CSS 3, and CSS 4. Profiles are typically a subset of one or more levels of CSS built for a particular device or user interface. Currently there are profiles for mobile devices, printers, and television sets. Profiles should not be confused with media types, which were added in CSS 2.
+
+									CSS 1[edit]
+									The first CSS specification to become an official W3C Recommendation is CSS level 1, published on December 17, 1996. Håkon Wium Lie and Bert Bos are credited as the original developers.[31][32] Among its capabilities are support for
+
+									Font properties such as typeface and emphasis
+									Color of text, backgrounds, and other elements
+									Text attributes such as spacing between words, letters, and lines of text
+									Alignment of text, images, tables and other elements
+									Margin, border, padding, and positioning for most elements
+									Unique identification and generic classification of groups of attributes
+									The W3C no longer maintains the CSS 1 Recommendation.[33]
+
+									CSS 2[edit]
+									CSS level 2 specification was developed by the W3C and published as a recommendation in May 1998. A superset of CSS 1, CSS 2 includes a number of new capabilities like absolute, relative, and fixed positioning of elements and z-index, the concept of media types, support for aural style sheets (which were later replaced by the CSS 3 speech modules)[34] and bidirectional text, and new font properties such as shadows.
+
+									The W3C no longer maintains the CSS 2 recommendation.[35]
+
+									CSS 2.1[edit]
+									CSS level 2 revision 1, often referred to as "CSS 2.1", fixes errors in CSS 2, removes poorly supported or not fully interoperable features and adds already implemented browser extensions to the specification. To comply with the W3C Process for standardizing technical specifications, CSS 2.1 went back and forth between Working Draft status and Candidate Recommendation status for many years. CSS 2.1 first became a Candidate Recommendation on February 25, 2004, but it was reverted to a Working Draft on June 13, 2005 for further review. It returned to Candidate Recommendation on 19 July 2007 and then updated twice in 2009. However, because changes and clarifications were made, it again went back to Last Call Working Draft on 7 December 2010.
+
+									CSS 2.1 went to Proposed Recommendation on 12 April 2011.[36] After being reviewed by the W3C Advisory Committee, it was finally published as a W3C Recommendation on 7 June 2011.[37]
+
+									CSS 3[edit]
+									"CSS3" redirects here. For other uses, see CSS3 (disambiguation).
+
+									Taxonomy and status of CSS3.
+									Unlike CSS 2, which is a large single specification defining various features, CSS 3 is divided into several separate documents called "modules". Each module adds new capabilities or extends features defined in CSS 2, preserving backward compatibility. Work on CSS level 3 started around the time of publication of the original CSS 2 recommendation. The earliest CSS 3 drafts were published in June 1999.[38]
+
+									Due to the modularization, different modules have different stability and statuses.[39] As of June 2012, there are over fifty CSS modules published from the CSS Working Group.,[38] and four of these have been published as formal recommendations:
+
+									2012-06-19: Media Queries
+									2011-09-29: Namespaces
+									2011-09-29: Selectors Level 3
+									2011-06-07: Color
+									Some modules (including Backgrounds and Borders and Multi-column Layout among others) have Candidate Recommendation (CR) status and are considered moderately stable. At CR stage, implementations are advised to drop vendor prefixes.[40] Summary of all module-specifications:[41]
+
+									Module	Specification title	Status, date
+									css3-background	CSS Backgrounds and Borders Module Level 3 	Candidate Recommendation, September 2014
+									css3-box	CSS basic box model	Working Draft, August 2007
+									css-cascade-3	CSS Cascading and Inheritance Level 3 	Candidate Recommendation, October 2013
+									css3-color	CSS Color Module Level 3	Recommendation, June 2011
+									css3-content	CSS3 Generated and Replaced Content Module 	Working Draft, May 2003
+									css-fonts-3	CSS Fonts Module Level 3	Candidate Recommendation, October 2013
+									css3-gcpm	CSS Generated Content for Paged Media Module	Working Draft, May 2014
+									css3-layout	CSS Template Layout Module	Working Draft, November 2011
+									css3-mediaqueries 	Media Queries	Recommendation, June 2012
+									css3-page	CSS Paged Media Module Level 3	Working Draft, March 2013
+									css3-selectors	Selectors Level 3	Recommendation, September 2011
+									css3-ui	CSS Basic User Interface Module Level 3 (CSS3 UI) 	Working Draft, January 2012
+									CSS 4[edit]
+									There is no single, integrated CSS4 specification,[42] because it is split into separate modules. However, there are "level 4" modules.[43]
+
+									Because CSS3 split the CSS language's definition into modules, the modules have been allowed to level independently. Most modules are level 3—they build on things from CSS 2.1. A few level-4 modules exist (such as Image Values, Backgrounds & Borders, or Selectors), which build on the functionality of a preceding level-3 module. Other modules defining entirely new functionality, such as Flexbox, have been designated as "level 1".[44]
+
+									So, although no monolithic CSS4 will be worked on after CSS3 is finished completely, the level 4 modules can collectively be referred to as CSS4.[citation needed]
+								</p>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div>
+					<a type="button" class="btn btn-warning" id="prevbtn" >Previous</a>
+					<a type="button" class="btn btn-warning" id="nextbtn"  >Next</a>
+				</div>
+			</div>
+
+			<div class="col-md-3"  id="authorization">
+				<div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            		<div class="panel panel-info" >
+                    	<div class="panel-heading">
+                        	<div class="panel-title">Sign In</div>
+                        	<div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                    	</div>
+
+                    	<div style="padding-top:15px" class="panel-body" >
+
+                        	<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                        	<form id="loginform" class="form-horizontal" role="form">
+
+                            	<div style="margin-bottom: 25px" class="input-group">
+                                	<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                	<input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+                            	</div>
+
+                            	<div style="margin-bottom: 25px" class="input-group">
+                                	<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                	<input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                            	</div>
+
+                            	<div class="input-group">
+                                	<div class="checkbox">
+                                		<label>
+                                    		<input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                    	</label>
+                                	</div>
+                            	</div>
+
+                            	<div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+                                	<div class="col-sm-11 controls">
+                                    	<a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                                    	<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
+                                	</div>
+                            	</div>
+
+                            	<div class="form-group">
+                                	<div class="col-md-11 control">
+                                    	<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" class="withoutaccount">
+                                            Don't have an account! 
+                                        	<a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                            	Sign Up Here
+                                        	</a>
+                                    	</div>
+                                	</div>
+                            	</div>
+                        	</form>
+                    	</div>
+                    </div>
+        		</div>
+        		<div id="signupbox" style="display:none; margin-top:20px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign Up</div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px">	<a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a>
+                            </div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="email" placeholder="Email Address">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="firstname" class="col-md-3 control-label">First Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="icode" class="col-md-3 control-label">Invitation Code</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="icode" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <!-- Button -->
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp; Sign Up</button>
+                                        <span style="margin-left:8px;">or</span>  
+                                    </div>
+                                </div>
+
+                                <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Sign Up with Facebook</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+         		</div>
+			</div>
+
+		</div>
+
+		
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
