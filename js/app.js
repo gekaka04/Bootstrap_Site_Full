@@ -58,3 +58,8 @@ pageBtns.controller('showArrayCtrl', ['$scope', 'gettingData', '$templateCache',
 	}
 }]);
 
+$(function(){
+	$("#sortable").sortable({
+		placeholder: "ui-sortable-placeholder"
+	});
+});
