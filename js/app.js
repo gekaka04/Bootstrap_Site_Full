@@ -1,4 +1,4 @@
-var pageBtns = angular.module('pageBtns',['ui.bootstrap']);
+var pageBtns = angular.module('pageBtns',[ 'mgcrea.ngStrap' ]);
 pageBtns.factory('gettingData', ['$http', function($http){
 	return{
 		getArray: function(){
@@ -7,14 +7,16 @@ pageBtns.factory('gettingData', ['$http', function($http){
 		}
 	}
 }]);
-pageBtns.controller('showArrayCtrl', ['$scope', 'gettingData', function($scope, gettingData){
+pageBtns.controller('showArrayCtrl', ['$scope', 'gettingData', '$templateCache', function($scope, gettingData, $templateCache){
 
 	var topicIndex=0;
 
 	gettingData.getArray().success(function(array)
 	{
+		console.log(array);
 		$scope.topic=array[topicIndex];
 		$scope.topics=array;
+		console.log(array[topicIndex]);
 	});
 
 	$scope.nextTopic = function (){
@@ -34,11 +36,11 @@ pageBtns.controller('showArrayCtrl', ['$scope', 'gettingData', function($scope, 
 	}
 
 	/*ACCORDION UI-BOOTSTRAP AngularJS+BOOTSTRAP*/
-	$scope.status = {
-    isFirstOpen: true,
-    isFirstDisabled: false
+	'use strict';
+	$scope.multiplePanels = {
+    	activePanels: [0],
+    	allowMultiple:false
   	};
-  	$scope.oneAtATime = true;
 
   	/*CAROUSEL UI-BOOTSTRAP AngularJS+BOOTSTRAP*/
   	$scope.myInterval = 5000;

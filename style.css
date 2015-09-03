@@ -252,6 +252,7 @@ body{
 #nextbtn, #prevbtn{
 	color: black;
 	border: 1px solid black;
+	margin-bottom: 20px;
 }
 .point{
 	display: none;
@@ -262,4 +263,7 @@ body{
 .panel-default > .panel-heading{
 	background-color: lightgreen;
 }
-
+.ng-binding{
+	text-decoration: none;
+	cursor: pointer;
+}
