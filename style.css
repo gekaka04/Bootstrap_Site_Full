@@ -253,3 +253,13 @@ body{
 	color: black;
 	border: 1px solid black;
 }
+.point{
+	display: none;
+}
+.point.active{
+	display: block;
+}
+.panel-default > .panel-heading{
+	background-color: lightgreen;
+}
+

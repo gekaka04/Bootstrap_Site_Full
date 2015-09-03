@@ -1,0 +1,28 @@
+[
+	{
+		"title" : "C# HISTORY",
+		"data" : "During the development of the .NET Framework, the class libraries were originally written using a managed code compiler system called Simple Managed C (SMC)."
+	},
+	{
+		"title" : "JS HISTORY",
+		"data" : "Beginnings at Netscape JavaScript was originally developed by Brendan Eich, while he was working for Netscape Communications Corporation."
+	},
+	{
+		"title" : "ANGULARJS PHILOSOPHY",
+		"data" : "AngularJS is built on the belief that declarative programming should be used to create user interfaces and connect software components, while imperative programming is better suited to defining an application's business logic."
+	},
+	{
+		"isAcordion": true,
+		"acordionItems": [
+			{
+				"title" : "HTML HISTORY",
+				"data" : "In 1980, physicist Tim Berners-Lee, who was a contractor at CERN, proposed and prototyped ENQUIRE, a system for CERN researchers to use and share documents."
+			},
+			{
+				"title" : "CSS HISTORY",
+				"data" : "CSS was first proposed by Hakon Wium Lie on October 10, 1994."
+			}
+		]
+	}
+
+]
