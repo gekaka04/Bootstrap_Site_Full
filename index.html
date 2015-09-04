@@ -175,15 +175,14 @@
 
 				<a type="button" class="btn btn-warning" id="prevbtn" ng-click="prevTopic()">Previous</a>
 				<a type="button" class="btn btn-warning" id="nextbtn"  ng-click="nextTopic()">Next</a>
-
-					<ul id="sortable">
-						<li class="ui-state-default">Block 1</li>
-						<li class="ui-state-default">Block 2</li>
-						<li class="ui-state-default">Block 3</li>
-						<li class="ui-state-default">Block 4</li>
-						<li class="ui-state-default">Block 5</li>
-					</ul>
-					<input type="button" class="btn btn-danger" value="Add Block" id="addbtn">
+					
+					<div ng-controller="sortingCtrl" >
+					{{blocks.images}}
+						<ul id="sortable" sorting-btns >
+							<li class="ui-state-default" ng-repeat="block in blocks.images">{{block.Name}}</li>
+						</ul>
+						<a type="button" class="btn btn-danger" id="addbtn" ng-click="addLiSorting()">Add Block</a>
+					</div>
 				
 				<div id="slash">
 					<hr>

@@ -1,4 +1,5 @@
 var pageBtns = angular.module('pageBtns',[ 'mgcrea.ngStrap' ]);
+
 pageBtns.factory('gettingData', ['$http', function($http){
 	return{
 		getArray: function(){
@@ -7,16 +8,24 @@ pageBtns.factory('gettingData', ['$http', function($http){
 		}
 	}
 }]);
+
+pageBtns.factory('gettingBlocks',['$http', function($http){
+	return{
+		getBlocks: function(){
+			var promise = $http.get('../block.json');
+			return promise;
+		}
+	}
+}]);
+
 pageBtns.controller('showArrayCtrl', ['$scope', 'gettingData', '$templateCache', function($scope, gettingData, $templateCache){
 
 	var topicIndex=0;
 
 	gettingData.getArray().success(function(array)
 	{
-		console.log(array);
 		$scope.topic=array[topicIndex];
 		$scope.topics=array;
-		console.log(array[topicIndex]);
 	});
 
 	$scope.nextTopic = function (){
@@ -34,7 +43,7 @@ pageBtns.controller('showArrayCtrl', ['$scope', 'gettingData', '$templateCache',
 		}
 		$scope.topic=$scope.topics[topicIndex];
 	}
-
+	
 	/*ACCORDION UI-BOOTSTRAP AngularJS+BOOTSTRAP*/
 	'use strict';
 	$scope.multiplePanels = {
@@ -58,8 +67,31 @@ pageBtns.controller('showArrayCtrl', ['$scope', 'gettingData', '$templateCache',
 	}
 }]);
 
-$(function(){
-	$("#sortable").sortable({
-		placeholder: "ui-sortable-placeholder"
-	});
+pageBtns.directive("sortingBtns",function(){
+	return function(scope, element, attrs){
+		$(function(){
+			$(element).sortable({
+				placeholder: "ui-sortable-placeholder"
+			});
+		});
+	}
 });
+
+pageBtns.controller('sortingCtrl',['$scope','gettingBlocks',function($scope, gettingBlocks){
+
+	gettingBlocks.getBlocks().success(function(blocks)
+	{
+		console.log(blocks);
+		$scope.blocks=blocks;
+	});
+
+	$scope.addLiSorting = function (){
+		var newelement = {
+			Name : "Block " + ($scope.blocks.images.length+1),
+			Id : '_' + (new Date()).getTime()
+		};
+		$scope.blocks.images.push(newelement);
+	}
+
+}]);
+
